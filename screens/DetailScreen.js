@@ -5,7 +5,7 @@ import { View, Text } from "react-native";
 export default function DetailScreen() {
   return (
     <View>
-      <Text>詳細画面です</Text>
+      <Text>詳細画面</Text>
     </View>
   );
 }
