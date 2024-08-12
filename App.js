@@ -1,25 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+// 画面遷移をコントロールするファイル
+
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import NewsScreen from "./screens/NewsScreen";
+import DetailScreen from "./screens/DetailScreen";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.box}></View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="ニュース" component={NewsScreen} />
+        <Stack.Screen name="詳細ページ" component={DetailScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  box: {
-    height: 100,
-    width: "100%",
-    borderColor: "blue",
-    borderWidth: 1,
-  },
-});
