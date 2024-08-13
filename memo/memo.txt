@@ -1,5 +1,5 @@
+参考サイト
+https://www.youtube.com/watch?v=28CvBaSsoEI
+
 Git URL
 https://github.com/hoshinzm/weather-app.git
-
-http://api.openweathermap.org/data/2.5/weather?q=Asahikawa&lang=ja&exclude=hourly,minutely&units=metric&&APPID=${weatherApiKey}
-`http://api.openweathermap.org/data/2.5/weather?q=Asahikawa&lang=ja&exclude=hourly,minutely&units=metric&&APPID=${weatherApiKey}`
