@@ -2,7 +2,7 @@
 
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-export default function Newskiji({ imageuri, title, subtext, onPress }) {
+export default Newskiji = ({ imageuri, title, subtext, onPress }) => {
   let data = new Date(subtext);
   let year = data.getFullYear();
   let month = data.getMonth();
@@ -29,7 +29,7 @@ export default function Newskiji({ imageuri, title, subtext, onPress }) {
       </View>
     </TouchableOpacity>
   );
-}
+};
 
 const styles = StyleSheet.create({
   box: {
