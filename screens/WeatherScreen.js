@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  SafeAreaView,
-  FlatList,
-} from "react-native";
+import { StyleSheet, SafeAreaView, FlatList } from "react-native";
 import WeatherItem from "../component/WeatherItem";
 import axios from "axios";
 import { weatherApiKey } from "../env";

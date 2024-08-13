@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 
+// description: 天気の説明、icon: 天気アイコン、name: 都市名などを受け取る
 export default WeatherItem = ({ description, icon, name }) => {
   return (
     <View style={styles.box}>
@@ -11,7 +12,7 @@ export default WeatherItem = ({ description, icon, name }) => {
       <View style={styles.gazoBox}>
         <Image
           style={{ width: 95, height: 95 }}
-          source={{ url: `http://openweathermap.org/img/wn/${icon}@2x.png` }}
+          source={{ url: `http://openweathermap.org/img/wn/${icon}@2x.png` }} // iconから受け取ったアイコンIDを元にsourceで画像URLを指定
         />
         <Text style={styles.subText}>{description}</Text>
       </View>
