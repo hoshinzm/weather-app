@@ -64,23 +64,24 @@ export default WeatherScreen = () => {
   const [weather, setWeathers] = useState([]);
 
   useEffect(() => {
+    // 各地域の天気情報を取得
     TotalUri.forEach((info) => {
-      getWeathers(info);
+      getWeathers(info); // 各地域の天気情報を取得する関数を呼び出し
     });
   }, []);
 
   const getWeathers = async (info) => {
-    const response = await axios.get(info.uri);
-    const uriData = response.data.weather;
-    uriData[0].name = info.name;
-    // ...はJavaScriptのスプレッド構文
+    const response = await axios.get(info.uri); // 指定した地域の天気情報を取得
+    const uriData = response.data.weather; // 取得したデータから天気情報を抽出
+    uriData[0].name = info.name; // 天気情報に地域名を追加
+    // ...はJavaScriptのスプレッド構文。既存のweather配列に新しい天気情報を追加する
     setWeathers((weather) => [...weather, uriData[0]]);
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={weather}
+        data={weather} // 天気情報の配列を指定
         renderItem={({ item }) => (
           <WeatherItem
             description={item.description}

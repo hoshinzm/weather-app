@@ -14,6 +14,7 @@ const Stack = createStackNavigator();
 //　タブで画面切り替え
 const Tab = createBottomTabNavigator();
 
+// ニュース関連のStackNavigator
 const NewsStack = () => {
   return (
     <Stack.Navigator>
@@ -23,6 +24,7 @@ const NewsStack = () => {
   );
 };
 
+// 天気予報関連のStackNavigator
 const WeatherStack = () => {
   return (
     <Stack.Navigator>
